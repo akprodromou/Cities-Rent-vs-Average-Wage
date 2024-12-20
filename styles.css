@@ -1,0 +1,224 @@
+body {
+  position:relative;
+  justify-content: center; 
+  align-items: center; 
+  margin: 0; 
+}
+
+#dataviz_map {
+  display: flex;
+  justify-content: center; 
+  align-items: center; /* Vertically center content */
+  margin: 20px auto 0; 
+  width: 100%; 
+  max-width: 900px; /* Limits the maximum width */
+  padding-top: 10px; 
+}
+
+#dataviz_lollipop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#dataviz_facet_title {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 charts per row */
+  gap: 20px; 
+  justify-content: center; /* Center the grid horizontally */
+  margin: auto; /* Center the container on the page */
+  max-width: 20%; /* Limit the width of the grid */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#dataviz_facet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 charts per row */
+  gap: 20px; 
+  justify-content: center; /* Center the grid horizontally */
+  margin: auto; /* Center the container on the page */
+  max-width: 20%; /* Limit the width of the grid */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  #dataviz_facet {
+    grid-template-columns: repeat(2, 1fr); /* 2 charts per row on smaller screens */
+    gap: 8px; /* Reduce spacing further for smaller screens */
+    max-width: 90%; /* Expand width to fit smaller screens */
+  }
+}
+
+.lollipop-title {
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.0;
+  fill: black;
+  dominant-baseline: text-after-edge;
+}
+
+.lollipop-subtitle {
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 1.78rem;
+  font-weight: 400;
+  line-height: 1.0;
+  dominant-baseline: text-after-edge;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+.y-axis text {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  fill: #000000;
+  text-anchor: start;
+}
+
+.x-axis text {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  fill: #000000;
+  text-anchor: middle;
+}
+
+.legend {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  fill: #000000;
+  text-anchor: start;
+}
+
+.axis-label {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375em;
+  fill: #000000;
+  text-anchor: middle;
+}
+
+.axis-label-facet {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.815em;
+  fill: #000000;
+  text-anchor: middle;
+}
+
+.chart-title {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.815em;
+}
+
+.tooltip {
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.815em;
+}
+
+.domain {
+  stroke: grey;
+  stroke-width: 0px;
+}
+
+.axis .tick line {
+  stroke: gray;
+  stroke-opacity: 0.2;
+  stroke-width: 1px;
+}
+
+.referenceText {
+  font-size: 0.775rem;
+  fill: #5a5a5a;
+  font-family: "DM Sans", sans-serif;
+}
+
+.referenceText a {
+  text-decoration: none; /* Remove underline */
+  fill: #5a5a5a; 
+  cursor: pointer; /* Show a pointer on hover */
+}
+
+.referenceText a:hover {
+  fill: #222A71; /* Change color on hover */
+}
+
+.legend {
+  font-size: 0.815em;
+  fill: #000000;
+  font-family: "DM Sans", sans-serif;
+}
+
+.grid {
+  stroke: gray;
+  stroke-opacity: 0.2;
+}
+
+.tick {
+  stroke: gray;
+  stroke-opacity: 0.2;
+}
+
+.facet {
+  display: inline-block;
+  margin: 20px;
+}
+
+#dataviz_lollipop {
+  margin: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+  font-size: 0.815em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facet-titles {
+  font-size: 0.9375em;
+  font-weight: 400;
+  fill: #000000;
+  font-family: "DM Serif Display", sans-serif;
+  text-anchor: start;
+}
+
+.city-circle {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.country {
+  fill: #e0e0e0;
+  stroke: #333;
+  stroke-width: 0.5px;
+}
